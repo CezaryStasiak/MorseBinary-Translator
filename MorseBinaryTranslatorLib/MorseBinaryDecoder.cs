@@ -92,7 +92,10 @@ namespace MorseBinaryTranslatorLib
             Definitions.Add("1111111110", '9');
             Definitions.Add("1111111111", '0');
 
-
+            Definitions.Add("1011101110", ',');
+            Definitions.Add("1110111011", '.');
+            Definitions.Add("1111101011", '-');
+            Definitions.Add("1110101011", '!');
         }
     }
 }

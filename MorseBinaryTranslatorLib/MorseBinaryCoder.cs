@@ -40,7 +40,7 @@ namespace MorseBinaryTranslatorLib
         {
             Definitions.Add('e', "10");
             Definitions.Add('t', "11");
-
+            
             Definitions.Add(' ', "0000");
             Definitions.Add('a', "1011");
             Definitions.Add('m', "1111");
@@ -79,6 +79,11 @@ namespace MorseBinaryTranslatorLib
             Definitions.Add('8', "1111111010");
             Definitions.Add('9', "1111111110");
             Definitions.Add('0', "1111111111");
+
+            Definitions.Add(',', "1011101110");
+            Definitions.Add('.', "1110111011");
+            Definitions.Add('-', "1111101011");
+            Definitions.Add('!', "1110101011");
         }
 
         
