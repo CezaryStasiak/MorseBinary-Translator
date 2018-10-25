@@ -80,6 +80,19 @@ namespace MorseBinaryTranslatorLib
             Definitions.Add("11101011", 'x');
             Definitions.Add("11101111", 'y');
             Definitions.Add("11111010", 'z');
+
+            Definitions.Add("1011111111", '1');
+            Definitions.Add("1010111111", '2');
+            Definitions.Add("1010101111", '3');
+            Definitions.Add("1010101011", '4');
+            Definitions.Add("1010101010", '5');
+            Definitions.Add("1110101010", '6');
+            Definitions.Add("1111101010", '7');
+            Definitions.Add("1111111010", '8');
+            Definitions.Add("1111111110", '9');
+            Definitions.Add("1111111111", '0');
+
+
         }
     }
 }

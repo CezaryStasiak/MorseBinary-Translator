@@ -17,17 +17,18 @@ namespace MorseBinaryTranslatorLib
         public string Translate(string text)
         {
             string translation = "";
+            string letterBreak = "00";
 
             foreach (var character in text)
             {
                 if (Definitions.ContainsKey(character))
                 {
                     translation += Definitions[character];
-                    translation += "00";
+                    translation += letterBreak;
                 }
                 else
                 {
-                    translation += "XX";
+                    translation += "X";
                 }
 
             }
@@ -67,6 +68,17 @@ namespace MorseBinaryTranslatorLib
             Definitions.Add('x', "11101011");
             Definitions.Add('y', "11101111");
             Definitions.Add('z', "11111010");
+
+            Definitions.Add('1', "1011111111");
+            Definitions.Add('2', "1010111111");
+            Definitions.Add('3', "1010101111");
+            Definitions.Add('4', "1010101011");
+            Definitions.Add('5', "1010101010");
+            Definitions.Add('6', "1110101010");
+            Definitions.Add('7', "1111101010");
+            Definitions.Add('8', "1111111010");
+            Definitions.Add('9', "1111111110");
+            Definitions.Add('0', "1111111111");
         }
 
         
