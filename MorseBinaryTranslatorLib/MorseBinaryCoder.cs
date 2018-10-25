@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace MorseBinaryTranslatorLib
 {
@@ -12,7 +13,7 @@ namespace MorseBinaryTranslatorLib
             Definitions = new Dictionary<char, string>();
             DefineDictionary();
         }
-
+        
         public string Translate(string text)
         {
             string translation = "";
