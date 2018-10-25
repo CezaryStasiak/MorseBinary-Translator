@@ -4,9 +4,7 @@ namespace MorseBinaryTranslatorLib
 {
     public class MorseBinaryCoder
     {
-        public delegate void ErrorReportDelegate();
-        public event ErrorReportDelegate CodeError;
-        public event ErrorReportDelegate CodeErrorFixed;
+
         private Dictionary<char, string> Definitions;
 
         public MorseBinaryCoder()
