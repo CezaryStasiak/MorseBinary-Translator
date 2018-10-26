@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace MorseBinaryTranslatorLib
@@ -16,24 +17,24 @@ namespace MorseBinaryTranslatorLib
         
         public string Translate(string text)
         {
-            string translation = "";
+            StringBuilder translation = new StringBuilder("");
             string letterBreak = "00";
 
             foreach (var character in text)
             {
                 if (Definitions.ContainsKey(character))
                 {
-                    translation += Definitions[character];
-                    translation += letterBreak;
+                    translation.Append(Definitions[character]);
+                    translation.Append(letterBreak);
                 }
                 else
                 {
-                    translation += "X";
+                    translation.Append("X");
                 }
 
             }
 
-            return translation;
+            return translation.ToString();
         }
 
         private void DefineDictionary()

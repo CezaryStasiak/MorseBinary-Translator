@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace MorseBinaryTranslatorLib
@@ -15,7 +16,7 @@ namespace MorseBinaryTranslatorLib
 
         public string Translate(string text)
         {
-            string translation = "";
+            StringBuilder translation = new StringBuilder("");
             int position = 0;
             string key = "";
             string currentBits = "";
@@ -30,14 +31,14 @@ namespace MorseBinaryTranslatorLib
                 {
                     if (Definitions.ContainsKey(key))
                     {
-                        translation += Definitions[key];
+                        translation.Append(Definitions[key]);
                         key = "";
                     }
                     if (position + 6 < text.Length)
                     {
                         if (text.Substring(position + 2, 2) == "00" && text.Substring(position + 4, 2) == "00")
                         {
-                            translation += " ";
+                            translation.Append(" ");
                         }
                     }
                 }
@@ -45,7 +46,7 @@ namespace MorseBinaryTranslatorLib
                 position += 2;
 
             }
-            return translation;
+            return translation.ToString();
         }
         
         private void DefineDictionary()
